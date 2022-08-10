@@ -6,6 +6,6 @@ export default function message(client: Client) {
         const guild: Guild | undefined = client.guilds.cache.find(e => e.id === message.guildId);
         // const user: User | undefined = client?.users.cache.find(e => e.id === message.author.id);
         const guilduser: GuildMember | undefined = guild?.members.cache.find(e => e.id === message.author.id);
-        logger.log(`user is: ${guilduser?.user.username}`);
+        logger.log(`user is: ${guilduser?.user.username} status: ${guilduser?.presence?.status}`);
   });
 }
