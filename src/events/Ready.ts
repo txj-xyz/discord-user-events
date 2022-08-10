@@ -1,8 +1,8 @@
-import { Client } from 'discord.js-selfbot-v13';
-
+import { Client, Message } from "discord.js-selfbot-v13";
+import { logger } from "../modules/Logger";
 
 export default function ready(client: Client) {
-    client.on("ready", () => {
-        console.log('[client] logged in')
-    })
+  client.on("ready", () => {
+    logger.log("[client] logged in");
+  });
 }
